@@ -1,0 +1,37 @@
+/* Added by Aryan Jaiswal (2026). Styles for place, scanner, passport and QR pages. */
+.pl,.sc,.pp,.qr{font-family:'Inter',system-ui,sans-serif;color:#F4E8C1}
+.pl{position:fixed;inset:0;background:#0b0805;overflow:hidden}
+.pl-bg{position:absolute;inset:-20px;background-size:cover;background-position:center;filter:blur(18px) brightness(.4)}
+.pl model-viewer{position:absolute;inset:0;width:100%;height:100%;--poster-color:transparent;background:transparent}
+.pl-hero{position:absolute;inset:0;background-size:cover;background-position:center;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.12)}}
+.pl-load{position:absolute;left:0;right:0;top:0;height:3px;background:#2a2118}.pl-load i{display:block;height:3px;background:#C5A059}
+.pl-top{position:absolute;top:calc(env(safe-area-inset-top,0px) + 12px);left:12px;right:12px;display:flex;justify-content:space-between;gap:8px}
+.pl-tools{display:flex;gap:8px}
+.pl-btn,.pl-main,.pl-list a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:22px;border:1px solid #C5A059;background:#0a0806d9;color:#F4E8C1;font:600 13px 'Cinzel',serif;letter-spacing:.08em;text-decoration:none;cursor:pointer;backdrop-filter:blur(8px)}
+.pl-main{background:#C5A059;color:#1a1208}
+.pl-sheet{position:absolute;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);max-width:460px;padding:16px 18px;border-radius:20px;background:#0a0806e6;border:1px solid #4a3a1f;backdrop-filter:blur(10px);max-height:58vh;overflow:auto}
+.pl-era{font:600 11px 'Cinzel',serif;letter-spacing:.14em;color:#C5A059;text-transform:uppercase}
+.pl-sheet h1{margin:4px 0 2px;font:700 28px 'Cinzel',serif}.pl-loc{color:#cdbf9a;font-size:13px}.pl-sheet p{font:400 17px/1.45 'Cormorant Garamond',serif;margin:10px 0}
+.pl-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
+.pl-facts div{padding:8px 10px;border:1px solid #3a2e19;border-radius:12px}.pl-facts span{display:block;font-size:11px;color:#b9a97f}.pl-facts b{font-size:14px}
+.pl-note{font-size:14px!important;color:#e6c98a}
+.pl-actions{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.pl-nav{display:flex;justify-content:space-between;gap:8px;font-size:12px}.pl-nav a{color:#C5A059;text-decoration:none;min-height:44px;display:flex;align-items:center}
+.pl-lost,.pp,.qr{padding:24px;overflow:auto;position:fixed;inset:0;background:#0b0805}
+.pl-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.sc{position:fixed;inset:0;background:#000}.sc video{width:100%;height:100%;object-fit:cover}
+.sc-frame{position:absolute;left:50%;top:42%;width:min(70vw,320px);aspect-ratio:1;transform:translate(-50%,-50%);border:3px solid #C5A059;border-radius:24px;box-shadow:0 0 0 100vmax #0007}
+.sc-back{position:absolute;top:calc(env(safe-area-inset-top,0px) + 12px);left:12px}
+.sc-msg{position:absolute;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);text-align:center;background:#0a0806d9;border-radius:16px;padding:14px}
+.pp h1,.qr h1{font:700 28px 'Cinzel',serif;margin:16px 0 4px}
+.pp-bar{height:6px;border-radius:3px;background:#2a2118;margin:12px 0}.pp-bar i{display:block;height:6px;border-radius:3px;background:#C5A059}
+.pp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:16px 0}
+.pp-card{position:relative;display:block;border-radius:14px;overflow:hidden;border:1px solid #3a2e19;text-decoration:none;color:#F4E8C1;filter:grayscale(1) brightness(.6)}
+.pp-card.on{filter:none;border-color:#C5A059}.pp-card img{display:block;width:100%;height:110px;object-fit:cover}.pp-card span{display:block;padding:8px 10px;font-size:13px;font-weight:600}
+.qr .row{display:flex;gap:8px;max-width:640px}.qr input{flex:1;min-height:44px;padding:0 14px;border-radius:22px;border:1px solid #5a4724;background:#14100a;color:#F4E8C1;font:inherit}
+.qr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin-top:20px}
+.qr-card{background:#fff;color:#1a1208;border-radius:14px;padding:12px;text-align:center;break-inside:avoid;display:flex;flex-direction:column;gap:4px}
+.qr-card img{width:100%;display:block}.qr-card span{font-size:13px}.qr-card small{color:#6b5b3a}.qr-card a{color:#7a5a12;font-size:12px;min-height:44px;display:flex;align-items:center;justify-content:center}
+@media print{.noprint{display:none!important}.qr{position:static;background:#fff;overflow:visible}.qr-grid{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:900px){.pl-sheet{left:24px;bottom:24px}}
